@@ -30,7 +30,7 @@ class loginController extends Controller
         $admin=Admin::select()->where('email',$request->input('email'))->first();
       //  return $admin;
 
-        $remember_me = $request->has('remember_me')? true : false ;
+
 
         if($admin){
             if (Hash::check($request->password,$admin->password)){

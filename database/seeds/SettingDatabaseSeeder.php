@@ -27,10 +27,10 @@ class SettingDatabaseSeeder extends Seeder
             'outer_sipping_cost'=>8,
             'free_sipping_cost'=>8,
             'translatable'=>[
-                'store_name'=>'DESER store',
-                'free_sipping_lable'=>'free sipping',
-                'local_lable'=>'local sipping',
-                'outer_lable'=>'outer sipping'
+                'store_name'=>'تجر ديزر',
+                'free_sipping_lable'=>'التوصيل المجاني',
+                'local_lable'=>'التوصيل المحلي',
+                'outer_lable'=>'التوصيل الخارجي'
             ],
 
 

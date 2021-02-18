@@ -23,10 +23,10 @@ Route::group(
     ], function(){
 
 
-Route::group(['namespace'=>'Dashboard','prefix'=>'admin'],function (){
+Route::group(['namespace'=>'Dashboard','prefix'=>'admin','middleware' => 'auth:admin'],function (){
 
    Route::get('/','dashboardController@index')->name('admin.dashboard') ;//the first page in the dashboard if authantication
-
+    Route::get('logout','dashboardController@logout')->name('logout.admin');
     Route::group(['prefix','settings'],function (){
 
         Route::get('sipping-methods/{type}','SettingsController@editShippingMethod')->name('edit.shippings.methods');

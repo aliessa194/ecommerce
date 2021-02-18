@@ -16,17 +16,22 @@ class loginController extends Controller
     }
 
     public function postLogin(adminLoginRequest $request){
-/*
-        $remember_me = $request->has('remember_me')? true : false ;
+
+        //return $request;
+
+        $remember_me = $request -> has('remember_me') ? true : false ;
 
         if (auth()->guard('admin')->attempt(['email'=> $request->input('email'),'password'=>$request->input('password')],$remember_me)){
 
             return redirect()->route('admin.dashboard');
+
         };
 
         return redirect()->back()->with(['error'=>'the data is false']);
 
-*/
+
+        /*
+
         $admin=Admin::select()->where('email',$request->input('email'))->first();
       //  return $admin;
 
@@ -49,8 +54,9 @@ class loginController extends Controller
             return redirect()->back()->with(['error'=>'your email invalid']);
         }
 
-
+*/
    }
+
 
 
 

@@ -15,4 +15,20 @@ class dashboardController extends Controller
         return view('dashboard.index');
 
     }
+
+    public function logout(){
+
+        $guard=$this->getGaurd();
+        $guard->logout();
+        return redirect()->route('admin.login');
+
+    }
+
+    private function getGaurd(){
+
+        return auth('admin');
+
+}
+
+
 }

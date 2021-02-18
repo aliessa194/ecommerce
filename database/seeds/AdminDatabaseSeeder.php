@@ -13,7 +13,7 @@ class AdminDatabaseSeeder extends Seeder
     {
         \App\Models\Admin::create([
 
-            'name'=>'essaa',
+            'name'=>'ali essa',
             'email'=>'eessaa7099@gmail.com',
             'password'=>bcrypt('123456789')
 

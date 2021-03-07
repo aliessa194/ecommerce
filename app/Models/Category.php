@@ -38,5 +38,10 @@ class Category extends Model
         return $this -> is_active == 0 ? 'غير مفعل' : 'مغفل';
     }
 
+    public function _parent(){
+
+        return $this->belongsTo(self::class,'parent_id','id');
+    }
+
 
 }

@@ -12,7 +12,7 @@ class MainCategoriesController extends Controller
 {
     public function index()
     {
-         $cat=Category::parent()->orderBy('id','DESC')->paginate(PAGINATION_COUNT);
+         $cat=Category::with('_parent')->orderBy('id','DESC')->paginate(PAGINATION_COUNT);
          return view('dashboard.catogeries.index',compact('cat'));
 
 
@@ -22,7 +22,10 @@ class MainCategoriesController extends Controller
     public function creat()
     {
 
-        return view('dashboard.catogeries.creat');
+
+        $cat=Category::select('id','parent_id')->get();
+
+        return view('dashboard.catogeries.creat',compact('cat'));
 
     }
 
@@ -37,6 +40,11 @@ class MainCategoriesController extends Controller
                 $request->request->add(['is_active' => 0]);
             else
                 $request->request->add(['is_active' => 1]);
+
+             if ($request-> type == 1){
+
+                 $request->request->add(['parent_id' => null ]);
+             }
 
             DB::beginTransaction();
 
@@ -84,7 +92,6 @@ class MainCategoriesController extends Controller
     public function update(MainCategoriesRequest $request ,$id){
 
         try {
-
 
             if (!$request->has('is_active'))
                 $request->request->add(['is_active' => 0]);

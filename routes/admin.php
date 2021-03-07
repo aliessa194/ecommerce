@@ -67,6 +67,32 @@ Route::group(['namespace'=>'Dashboard','prefix'=>'admin','middleware' => 'auth:a
 
     });
 
+    Route::group(['prefix'=>'brands'],function (){
+
+        Route::get('/','BrandsController@index')->name('admin.brands');
+        Route::get('creat','BrandsController@creat')->name('admin.brands.creat');
+        Route::post('store','BrandsController@store')->name('admin.brands.store');
+        Route::get('edit/{id}','BrandsController@edit')->name('admin.brands.edit');
+        Route::post('update/{id}','BrandsController@update')->name('admin.brands.update');
+        Route::get('delete/{id}','BrandsController@delete')->name('admin.brands.delete');
+
+    });
+
+
+
+
+    Route::group(['prefix'=>'tags'],function (){
+
+        Route::get('/','TagsController@index')->name('admin.tags');
+        Route::get('creat','TagsController@creat')->name('admin.tags.creat');
+        Route::post('store','TagsController@store')->name('admin.tags.store');
+        Route::get('edit/{id}','TagsController@edit')->name('admin.tags.edit');
+        Route::post('update/{id}','TagsController@update')->name('admin.tags.update');
+        Route::get('delete/{id}','TagsController@delete')->name('admin.tags.delete');
+
+    });
+
+
 
 });
 

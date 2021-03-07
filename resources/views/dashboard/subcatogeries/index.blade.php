@@ -62,14 +62,14 @@
                                         <tr>
                                             <td>{{$category -> name}}</td>
                                             <td>{{$category -> slug}}</td>
-                                            <td>{{$category -> slug}}</td>
+                                            <td>{{$category ->_parent->name}}</td>
                                             <td>{{$category -> getActive()}}</td>
                                             <td> <img style="width: 150px; height: 100px;" src="{{$category -> 	photo}}"></td>
                                             <td>
                                                 <div class="btn-group" role="group"
                                                      aria-label="Basic example">
                                                     <a href="{{route('admin.sub_categories.edit',$category -> id)}}"
-                                                       class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">تعديل</a>
+                                                       class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1" >تعديل</a>
 
 
                                                     <a href="{{route('admin.sub_categories.delete',$category -> id)}}"
@@ -95,6 +95,10 @@
 
                                             </tbody>
                                         </table>
+
+
+
+
                                         <div class="justify-content-center d-flex">
 
                                         </div>

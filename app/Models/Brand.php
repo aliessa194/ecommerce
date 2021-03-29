@@ -24,6 +24,10 @@ class Brand extends Model
         return $this -> is_active == 0 ? 'غير مفعل' : 'مغفل';
     }
 
+    public function scopeActive($q){
+         return $q->where('is_active',1);
+    }
+
     public function getPhotoAttribute ($val)
     {
 

@@ -72,6 +72,53 @@
             </li>
 
 
+            <li class="nav-item"><a href=""><i class="la la-male"></i>
+                    <span class="menu-title" data-i18n="nav.dash.main">المنتجات </span>
+                    <span
+                        class="badge badge badge-warning  badge-pill float-right mr-2"> </span>
+                </a>
+                <ul class="menu-content">
+                    <li class="active"><a class="menu-item" href="{{route('admin.products')}}"
+                                          data-i18n="nav.dash.ecommerce"> عرض الكل </a>
+                    </li>
+                    <li><a class="menu-item" href="{{route('admin.products.general.create')}}" data-i18n="nav.dash.crypto">أضافة
+                            منتج جديد </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="nav-item"><a href=""><i class="la la-male"></i>
+                    <span class="menu-title" data-i18n="nav.dash.main">خصائص المنتجات</span>
+                    <span
+                        class="badge badge badge-warning  badge-pill float-right mr-2"> </span>
+                </a>
+                <ul class="menu-content">
+                    <li class="active"><a class="menu-item" href="{{route('admin.attributes')}}"
+                                          data-i18n="nav.dash.ecommerce"> عرض الكل </a>
+                    </li>
+                    <li><a class="menu-item" href="{{route('admin.attributes.create')}}" data-i18n="nav.dash.crypto">أضافة
+                            منتج جديد </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="nav-item"><a href=""><i class="la la-male"></i>
+                    <span class="menu-title" data-i18n="nav.dash.main">خصائص options</span>
+                    <span
+                        class="badge badge badge-warning  badge-pill float-right mr-2"> </span>
+                </a>
+                <ul class="menu-content">
+                    <li class="active"><a class="menu-item" href="{{route('admin.options')}}"
+                                          data-i18n="nav.dash.ecommerce"> عرض الكل </a>
+                    </li>
+                    <li><a class="menu-item" href="{{route('admin.options.create')}}" data-i18n="nav.dash.crypto">أضافة
+                            منتج جديد </a>
+                    </li>
+                </ul>
+            </li>
+
+
+
             <li class="nav-item">
                 <a href=""><i class="la la-male"></i>
                     <span class="menu-title" data-i18n="nav.dash.main">تذاكر المراسلات   </span>
@@ -98,6 +145,15 @@
                             </li>
                             <li><a class="menu-item" href="{{route('edit.shippings.methods','outer')}}"
                                    data-i18n="nav.templates.vert.compact_menu">توصيل خارجي</a>
+                            </li>
+
+                            <li><a class="menu-item" href="#"
+                                   data-i18n="nav.templates.vert.main"> الاسليدر </a>
+                                <ul class="menu-content">
+                                    <li><a class="menu-item" href="{{route('admin.sliders.create')}}"
+                                           data-i18n="nav.templates.vert.classic_menu">صور الاسليدر </a>
+                                    </li>
+                                </ul>
                             </li>
 
                         </ul>

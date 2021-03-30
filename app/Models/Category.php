@@ -22,7 +22,6 @@ class Category extends Model
 
 
 
-
     public function scopeParent($query){
 
        return $query->whereNull('parent_id');
@@ -41,6 +40,21 @@ class Category extends Model
     public function _parent(){
 
         return $this->belongsTo(self::class,'parent_id','id');
+    }
+
+    public function scopeActive($q){
+        return $q->where('is_active',1);
+    }
+
+
+    //get all childrens=
+    public function childrens(){
+        return $this -> hasMany(Self::class,'parent_id');
+    }
+
+    public function products()
+    {
+        return $this -> belongsToMany(Product::class,'product_categories');
     }
 
 

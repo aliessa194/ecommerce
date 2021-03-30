@@ -21,3 +21,17 @@ Route::get('/test', function (){
     $cat->makeVisible(['translations']);
     return $cat;
 });
+
+Auth::routes();
+
+Route::get('/dd',function (){
+    return view('front.home');
+});
+
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+

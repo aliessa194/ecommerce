@@ -16,4 +16,9 @@ class Tag extends Model
     protected $hidden=['translations'];
 
 
+    public function scopeActive($q){
+        return $q->where('is_active',1);
+    }
+
+
 }
